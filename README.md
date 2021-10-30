@@ -28,9 +28,11 @@ struct EthernetHeader {
     #[bit(2)]
     length: u8,
 }
+```
 
-// Will expand to something like that:
+Will expand to something like that:
 
+```rust,ignore
 #[derive(Default)]
 struct EthernetHeader {
     __base_field_0: u8,
