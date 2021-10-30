@@ -17,3 +17,4 @@ syn = { version = "1.0.74", features = ["full"] }
 [dev-dependencies]
 quickcheck = "1.0.3"
 quickcheck_macros = "1.0.0"
+static_assertions = "1.1.0"

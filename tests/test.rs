@@ -1,28 +1,19 @@
 use bit_by_bit::bit_by_bit;
 
 #[bit_by_bit]
-pub struct T<'a, Y: Into<u32>, S: std::fmt::Display>
-where
-    Y: Clone,
-{
+#[derive(Default)]
+pub struct T {
     #[bit(10)]
     x1: u32,
     #[bit(21)]
     x2: u32,
     #[bit(10)]
     x3: i32,
-    _y: &'a (Y, S),
 }
 
-const VAL: (u8, &'static str) = (5, "test");
-
-impl T<'static, u8, &'static str> {
+impl T {
     fn new() -> Self {
-        Self {
-            __base_field_0: 0,
-            __base_field_1: 0,
-            _y: &VAL,
-        }
+        T::default()
     }
 }
 
