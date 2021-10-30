@@ -1,0 +1,19 @@
+[package]
+name = "bit-by-bit"
+version = "0.1.0"
+description = "Convenient proc-macro for defining structs with bitfields"
+authors = ["Kitsu <mail@kitsu.me>"]
+license = "MIT OR Apache-2.0"
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.28"
+quote = "1.0.9"
+syn = { version = "1.0.74", features = ["full"] }
+
+[dev-dependencies]
+quickcheck = "1.0.3"
+quickcheck_macros = "1.0.0"
